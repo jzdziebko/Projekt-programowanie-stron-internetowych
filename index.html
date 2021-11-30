@@ -15,38 +15,42 @@
             <div class="wpis">
                 <div class="box" class="act1">
                     <div class="smallbox">
-                        <label >Wybierz klasę: </label>
-                        <input type="radio" id="klr" name="k" value="Cleric" onclick="updateCl()">
-                        <label for="klr">Kleryk</label><br>
-                        <input type="radio" id="wjw" name="k" value="Fighter" onclick="updateFi()">
-                        <label for="wjw">Wojownik</label><br>
-                        <input type="radio" id="ltr" name="k" value="Rogue" onclick="updateLo()">
-                        <label for="ltr">Łotr</label><br>
-                        <input type="radio" id="mag" name="k" value="Mage" onclick="updateMa()">
-                        <label for="mag">Mag</label><br>
-                        <br>
-                        <label for="rasa">Wybierz rasę:</label>
-                        <input type="radio" id="dwf" name="r" value="Dwarf" onclick="updateD()">
-                        <label for="dwf">Krasnolud</label><br>
-                        <input type="radio" id="elf" name="r" value="Elf" onclick="updateE()">
-                        <label for="elf">Elf</label><br>
-                        <input type="radio" id="hlg" name="r" value="Half" onclick="updateN()">
-                        <label for="hlg">Niziołek</label><br>
-                        <input type="radio" id="hum" name="r" value="Human" onclick="updateC()">
-                        <label for="hum">Człowiek</label><br>
-                        </select><br>
-                        <label for="cstr">Wysokość twojej siły: </label>
-                        <input type="number" id="cstr" name="cstr" onchange="updateSil()"><br>
-                        <label for="cdex">Wysokość twojej zręczności: </label>
-                        <input type="number" id="cdex" name="cdex" onchange="updateZre()"><br>
-                        <label for="ccon">Wysokość twojej kondycji: </label>
-                        <input type="number" id="ccon" name="ccon" onchange="updateKon()"><br>
-                        <label for="cint">Wysokość twojej inteligencji: </label>
-                        <input type="number" id="cint" name="cint" onchange="updateInt()"><br>
-                        <label for="cwis">Wysokość twojej mądrości: </label>
-                        <input type="number" id="cwis" name="cwis" onchange="updateWie()"><br>
-                        <label for="ccha">Wysokość twojej charyzmy: </label>
-                        <input type="number" id="ccha" name="ccha" onchange="updateCha()">
+                        <div>
+                            <label >Wybierz klasę: </label><br>
+                            <input type="radio" id="klr" name="k" value="Cleric" onclick="updateCl()">
+                            <label for="klr">Kleryk</label><br>
+                            <input type="radio" id="wjw" name="k" value="Fighter" onclick="updateFi()">
+                            <label for="wjw">Wojownik</label><br>
+                            <input type="radio" id="ltr" name="k" value="Rogue" onclick="updateRo()">
+                            <label for="ltr">Łotr</label><br>
+                            <input type="radio" id="mag" name="k" value="Wizard" onclick="updateWi()">
+                            <label for="mag">Mag</label><br>
+                            <br>
+                            <label for="rasa">Wybierz rasę:</label><br>
+                            <input type="radio" id="dwf" name="r" value="Dwarf" onclick="updateD()">
+                            <label for="dwf">Krasnolud</label><br>
+                            <input type="radio" id="elf" name="r" value="Elf" onclick="updateE()">
+                            <label for="elf">Elf</label><br>
+                            <input type="radio" id="hlg" name="r" value="Half" onclick="updateN()">
+                            <label for="hlg">Niziołek</label><br>
+                            <input type="radio" id="hum" name="r" value="Human" onclick="updateC()">
+                            <label for="hum">Człowiek</label><br>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="cstr">Wysokość twojej siły: </label>
+                            <input type="number" id="cstr" name="cstr" onchange="updateSil()"><br>
+                            <label for="cdex">Wysokość twojej zręczności: </label>
+                            <input type="number" id="cdex" name="cdex" onchange="updateZre()"><br>
+                            <label for="ccon">Wysokość twojej kondycji: </label>
+                            <input type="number" id="ccon" name="ccon" onchange="updateKon()"><br>
+                            <label for="cint">Wysokość twojej inteligencji: </label>
+                            <input type="number" id="cint" name="cint" onchange="updateInt()"><br>
+                            <label for="cwis">Wysokość twojej mądrości: </label>
+                            <input type="number" id="cwis" name="cwis" onchange="updateWie()"><br>
+                            <label for="ccha">Wysokość twojej charyzmy: </label>
+                            <input type="number" id="ccha" name="ccha" onchange="updateCha()">
+                        </div>
                     </div>
                 </div>
                 <div class="box" class="act2">
@@ -134,19 +138,25 @@
                 </div>
             </div>
             <div class="wyniki">
-                <div><p id="modS">-</p></div>
-                <div><p id="modZ">-</p></div>
-                <div><p id="modK">-</p></div>
-                <div><p id="modI">-</p></div>
-                <div><p id="modM">-</p></div>
-                <div><p id="modC">-</p></div>
-                <br>
-                <div><p id="saveS">-</p></div>
-                <div><p id="saveZ">-</p></div>
-                <div><p id="saveK">-</p></div>
-                <div><p id="saveI">-</p></div>
-                <div><p id="saveM">-</p></div>
-                <div><p id="saveC">-</p></div>
+                <div class="zawartosc1">
+                    Modyfikatory cech
+                    <div><p id="modS">-</p></div>
+                    <div><p id="modZ">-</p></div>
+                    <div><p id="modK">-</p></div>
+                    <div><p id="modI">-</p></div>
+                    <div><p id="modM">-</p></div>
+                    <div><p id="modC">-</p></div>
+                    <br>
+                </div>
+                <div class="zawartosc2">
+                    Modyfikatory rzutów obronnych
+                    <div><p id="saveS">-</p></div>
+                    <div><p id="saveZ">-</p></div>
+                    <div><p id="saveK">-</p></div>
+                    <div><p id="saveI">-</p></div>
+                    <div><p id="saveM">-</p></div>
+                    <div><p id="saveC">-</p></div>
+                </div>
             </div>
         </div>
     </div>
