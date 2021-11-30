@@ -4,95 +4,122 @@ var globKon = 0;
 var globInt = 0;
 var globWie = 0;
 var globCha = 0;
+const prof = 2;
 function updateSil(x) 
 {
     const input = document.getElementById('cstr')
-    const output = document.getElementById('modS');
+    const output1 = document.getElementById('modS');
+    const output2 = document.getElementById('saveS');
     let y=Math.floor((input.value-10+globSil)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
 function updateZre(x) 
 {
     const input = document.getElementById('cdex')
-    const output = document.getElementById('modZ');
+    const output1 = document.getElementById('modZ');
+    const output2 = document.getElementById('saveZ');
     let y=Math.floor((input.value-10+globZre)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
 function updateKon(x) 
 {
     const input = document.getElementById('ccon')
-    const output = document.getElementById('modK');
+    const output1 = document.getElementById('modK');
+    const output2 = document.getElementById('saveK');
     let y=Math.floor((input.value-10+globKon)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
 function updateInt(x) 
 {
     const input = document.getElementById('cint')
-    const output = document.getElementById('modI');
+    const output1 = document.getElementById('modI');
+    const output2 = document.getElementById('saveI');
     let y=Math.floor((input.value-10+globInt)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
 function updateWie(x) 
 {
     const input = document.getElementById('cwis')
-    const output = document.getElementById('modM');
+    const output1 = document.getElementById('modM');
+    const output2 = document.getElementById('saveM');
     let y=Math.floor((input.value-10+globWie)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
 function updateCha(x) 
 {
     const input = document.getElementById('ccha')
-    const output = document.getElementById('modC');
+    const output1 = document.getElementById('modC');
+    const output2 = document.getElementById('saveC');
     let y=Math.floor((input.value-10+globCha)/2);
-    output.textContent = y;
+    output1.textContent = y;
+    output2.textContent = y;
 }
-document.getElementById("rasa").addEventListener('click', updateRas());
-function updateRas()
+function updateD()
 {
-    //zdaję sobie sprawę, że to bardzo nieoptymalne rozwiązanie, ale z jakiegoś powodu switch case nie chciał działać
-    var rasa = document.getElementById("rasa");
-    if(rasa.value = "dwf")
-    {
-        window.prompt("dwf");
-        globSil = 2;
-        globZre = 0;
-        globKon = 2;
-        globInt = 0;
-        globWie = 0;
-        globCha = 0;
-    }else if(rasa.value = "elf")
-    {
-        window.prompt("Elf");
-        globSil = 0;
-        globZre = 2;
-        globKon = 0;
-        globInt = 1;
-        globWie = 0;
-        globCha = 0;
-    }else if(rasa.value = "hlg")
-    {
-        window.prompt("halfling");
-        globSil = 0;
-        globZre = 2;
-        globKon = 0;
-        globInt = 0;
-        globWie = 0;
-        globCha = 1;
-    }else if(rasa.value = "hmn")
-    {
-        globSil = 1;
-        globZre = 1;
-        globKon = 1;
-        globInt = 1;
-        globWie = 1;
-        globCha = 1;
-    }else
-    {
-        globSil = 0;
-        globZre = 0;
-        globKon = 0;
-        globInt = 0;
-        globWie = 0;
-        globCha = 0;
-    }
+    globSil = 2;
+    globZre = 0;
+    globKon = 2;
+    globInt = 0;
+    globWie = 0;
+    globCha = 0;
+    updateSil();
+    updateZre();
+    updateKon();
+    updateInt();
+    updateWie();
+    updateCha();
+}
+function updateE()
+{
+    globSil = 0;
+    globZre = 2;
+    globKon = 0;
+    globInt = 1;
+    globWie = 0;
+    globCha = 0;
+    updateSil();
+    updateZre();
+    updateKon();
+    updateInt();
+    updateWie();
+    updateCha();
+}
+function updateN()
+{
+    globSil = 0;
+    globZre = 2;
+    globKon = 0;
+    globInt = 0;
+    globWie = 0;
+    globCha = 1;
+    updateSil();
+    updateZre();
+    updateKon();
+    updateInt();
+    updateWie();
+    updateCha();
+}
+function updateC()
+{
+    globSil = 1;
+    globZre = 1;
+    globKon = 1;
+    globInt = 1;
+    globWie = 1;
+    globCha = 1;
+    updateSil();
+    updateZre();
+    updateKon();
+    updateInt();
+    updateWie();
+    updateCha();
+}
+function updateCl()
+{
+
 }

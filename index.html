@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main2.css">
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Generator</title>
 </head>
@@ -15,23 +15,25 @@
             <div class="wpis">
                 <div class="box" class="act1">
                     <div class="smallbox">
-                        <label for="klasa">Wybierz klasę: 
-                        </label>
-                        <select id="klasa" name="klasa">
-                        <option value="-">-</option>
-                        <option value="clr">Kleryk</option>
-                        <option value="fgt">Wojownik</option>
-                        <option value="rge">Łotr</option>
-                        <option value="wzd">Mag</option>
-                        </select>
+                        <label >Wybierz klasę: </label>
+                        <input type="radio" id="klr" name="k" value="Cleric" onclick="updateCl()">
+                        <label for="klr">Kleryk</label><br>
+                        <input type="radio" id="wjw" name="k" value="Fighter" onclick="updateFi()">
+                        <label for="wjw">Wojownik</label><br>
+                        <input type="radio" id="ltr" name="k" value="Rogue" onclick="updateLo()">
+                        <label for="ltr">Łotr</label><br>
+                        <input type="radio" id="mag" name="k" value="Mage" onclick="updateMa()">
+                        <label for="mag">Mag</label><br>
                         <br>
                         <label for="rasa">Wybierz rasę:</label>
-                        <select id="rasa" name="rasa">
-                        <option value="-">-</option>
-                        <option value="dwf" >Krasnolud</option>
-                        <option value="elf" >Elf</option>
-                        <option value="hlg" >Niziolek</option>
-                        <option value="hmn" >Czlowiek</option>
+                        <input type="radio" id="dwf" name="r" value="Dwarf" onclick="updateD()">
+                        <label for="dwf">Krasnolud</label><br>
+                        <input type="radio" id="elf" name="r" value="Elf" onclick="updateE()">
+                        <label for="elf">Elf</label><br>
+                        <input type="radio" id="hlg" name="r" value="Half" onclick="updateN()">
+                        <label for="hlg">Niziołek</label><br>
+                        <input type="radio" id="hum" name="r" value="Human" onclick="updateC()">
+                        <label for="hum">Człowiek</label><br>
                         </select><br>
                         <label for="cstr">Wysokość twojej siły: </label>
                         <input type="number" id="cstr" name="cstr" onchange="updateSil()"><br>
@@ -138,6 +140,13 @@
                 <div><p id="modI">-</p></div>
                 <div><p id="modM">-</p></div>
                 <div><p id="modC">-</p></div>
+                <br>
+                <div><p id="saveS">-</p></div>
+                <div><p id="saveZ">-</p></div>
+                <div><p id="saveK">-</p></div>
+                <div><p id="saveI">-</p></div>
+                <div><p id="saveM">-</p></div>
+                <div><p id="saveC">-</p></div>
             </div>
         </div>
     </div>
