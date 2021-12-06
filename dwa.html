@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <title>Kalkulator karty postaci</title>
+</head>
+
+<body>
+    <div class="cala">
+        <div class="content">
+            <div class="wpis">
+                <div class="box" class="act1">
+                    <div class="smallbox">
+                        <div>
+                            <label>Podaj poziom postaci: </label>
+                            <input type="number" id="poz" name="poz" onchange="updatePoz()"><br>
+                            <label>Wybierz klasę: </label><br>
+                            <input type="radio" id="klr" name="k" value="Cleric" onclick="updateCl()">
+                            <label for="klr">Kleryk</label><br>
+                            <input type="radio" id="wjw" name="k" value="Fighter" onclick="updateFi()">
+                            <label for="wjw">Wojownik</label><br>
+                            <input type="radio" id="ltr" name="k" value="Rogue" onclick="updateRo()">
+                            <label for="ltr">Łotr</label><br>
+                            <input type="radio" id="mag" name="k" value="Wizard" onclick="updateWi()">
+                            <label for="mag">Mag</label><br>
+                            <br>
+                            <label>Wybierz rasę:</label><br>
+                            <input type="radio" id="dwf" name="r" value="Dwarf" onclick="updateD()">
+                            <label for="dwf">Krasnolud</label><br>
+                            <input type="radio" id="elf" name="r" value="Elf" onclick="updateE()">
+                            <label for="elf">Elf</label><br>
+                            <input type="radio" id="hlg" name="r" value="Half" onclick="updateN()">
+                            <label for="hlg">Niziołek</label><br>
+                            <input type="radio" id="hum" name="r" value="Human" onclick="updateC()">
+                            <label for="hum">Człowiek</label><br>
+                            </select>
+                            <label for="cstr">Wysokość twojej siły: </label>
+                            <input type="number" id="cstr" name="cstr" onchange="updateSil()"><br>
+                            <label for="cdex">Wysokość twojej zręczności: </label>
+                            <input type="number" id="cdex" name="cdex" onchange="updateZre()"><br>
+                            <label for="ccon">Wysokość twojej kondycji: </label>
+                            <input type="number" id="ccon" name="ccon" onchange="updateKon()"><br>
+                            <label for="cint">Wysokość twojej inteligencji: </label>
+                            <input type="number" id="cint" name="cint" onchange="updateInt()"><br>
+                            <label for="cwis">Wysokość twojej mądrości: </label>
+                            <input type="number" id="cwis" name="cwis" onchange="updateWie()"><br>
+                            <label for="ccha">Wysokość twojej charyzmy: </label>
+                            <input type="number" id="ccha" name="ccha" onchange="updateCha()"><br>
+                        </div><br>
+                    </div>
+                </div>
+                <div class="box" class="act2">
+                    <div class="smallbox">
+                        <form>
+                            <div>
+                                <label>Sprawdź bonus umiejętności:</label><br><br>
+                                <input type="radio" class="umjj" id="umj1" value="1" name="umiejka" onclick="updateUmj()">
+                                <label for="umj1">Akrobatyka</label><br>
+                                <input type="radio" class="umjj" id="umj2" value="2" name="umiejka" onclick="updateUmj()">
+                                <label for="umj2">Opieka nad Zwierzętami</label><br>
+                                <input type="radio" class="umjj" id="umj3" value="3" name="umiejka" onclick="updateUmj()">
+                                <label for="umj3">Wiedza Tajemna</label><br>
+                                <input type="radio" class="umjj" id="umj4" value="4" name="umiejka" onclick="updateUmj()">
+                                <label for="umj4">Atletyka</label><br>
+                                <input type="radio" class="umjj" id="umj5" value="5" name="umiejka" onclick="updateUmj()">
+                                <label for="umj5">Oszustwo</label><br>
+                                <input type="radio" class="umjj" id="umj6" value="6" name="umiejka" onclick="updateUmj()">
+                                <label for="umj6">Historia</label><br>
+                                <input type="radio" class="umjj" id="umj7" value="7" name="umiejka" onclick="updateUmj()">
+                                <label for="umj7">Intuicja</label><br>
+                                <input type="radio" class="umjj" id="umj8" value="8" name="umiejka" onclick="updateUmj()">
+                                <label for="umj8">Zastraszanie</label><br>
+                                <input type="radio" class="umjj" id="umj9" value="9" name="umiejka" onclick="updateUmj()">
+                                <label for="umj9">Śledztwo</label><br>
+                                <input type="radio" class="umjj" id="umj10" value="10" name="umiejka" onclick="updateUmj()">
+                                <label for="umj10">Medycyna</label><br>
+                                <input type="radio" class="umjj" id="umj11" value="11" name="umiejka" onclick="updateUmj()">
+                                <label for="umj11">Natura</label><br>
+                                <input type="radio" class="umjj" id="umj12" value="12" name="umiejka" onclick="updateUmj()">
+                                <label for="umj12">Percepcja</label><br>
+                                <input type="radio" class="umjj" id="umj13" value="13" name="umiejka" onclick="updateUmj()">
+                                <label for="umj13">Występy</label><br>
+                                <input type="radio" class="umjj" id="umj14" value="14" name="umiejka" onclick="updateUmj()">
+                                <label for="umj14">Perswazja</label><br>
+                                <input type="radio" class="umjj" id="umj15" value="15" name="umiejka" onclick="updateUmj()">
+                                <label for="umj15">Religia</label><br>
+                                <input type="radio" class="umjj" id="umj16" value="16" name="umiejka" onclick="updateUmj()">
+                                <label for="umj16">Zwinne Dłonie</label><br>
+                                <input type="radio" class="umjj" id="umj17" value="17" name="umiejka" onclick="updateUmj()">
+                                <label for="umj17">Skradanie Się</label><br>
+                                <input type="radio" class="umjj" id="umj18" value="18" name="umiejka" onclick="updateUmj()">
+                                <label for="umj18">Sztuka Przetrwania</label><br>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="smallbox">
+                        <label>Sprawdź bonus dodatkowych biegłości:</label><br>
+                        <form>
+                            <div>
+                                <label>Pancerze</label><br>
+                                <input type="radio" id="bie0" value="" name="zbr" onclick="updateZbr()">
+                                <label for="bie1">Brak Zbroi</label><br>
+                                <input type="radio" id="bie1" value="" name="zbr" onclick="updateZbr()">
+                                <label for="bie1">Lekka Zbroja</label><br>
+                                <input type="radio" id="bie2" value="" name="zbr" onclick="updateZbr()">
+                                <label for="bie2">Średnia Zbroja</label><br>
+                                <input type="radio" id="bie3" value="" name="zbr" onclick="updateZbr()">
+                                <label for="bie3">Ciężka Zbroja</label><br>
+                                <label>Broń</label><br>
+                                <input type="radio" id="bie4" value="" name="bron" onclick="updateBrn()">
+                                <label for="bie4">Broń Prosta</label><br>
+                                <input type="radio" id="bie5" value="" name="bron" onclick="updateBrn()">
+                                <label for="bie5">Broń Wojskowa</label><br>
+                                <label>Narzędzia</label><br>
+                                <input type="radio" id="bie6" value="" name="narz" onclick="updateNrz()">
+                                <label for="bie6">Zestaw Przebrań</label><br>
+                                <input type="radio" id="bie7" value="" name="narz" onclick="updateNrz()">
+                                <label for="bie7">Narzędzia Złodzieja</label><br>
+                                <input type="radio" id="bie8" value="" name="narz" onclick="updateNrz()">
+                                <label for="bie8">Narzędzia Rzemieślnicze</label><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="wyniki">
+                <div class="zawartosc1">
+                    Modyfikatory cech<br><br>
+                    Modyfikator Siły:
+                    <div class="mm"><p class="wynik" id="modS">-</p></div>
+                    Modyfikator Zręczności: 
+                    <div class="mm"><p class="wynik" id="modZ">-</p></div>
+                    Modyfikator Kondycji: 
+                    <div class="mm"><p class="wynik" id="modK">-</p></div>
+                    Modyfikator Inteligencji: 
+                    <div class="mm"><p class="wynik" id="modI">-</p></div>
+                    Modyfikator Mądrości: 
+                    <div class="mm"><p class="wynik" id="modM">-</p></div>
+                    Modyfikator Charyzmy: 
+                    <div class="mm"><p class="wynik" id="modC">-</p></div>
+                    <br>
+                </div>
+                <div class="zawartosc2">
+                    Modyfikatory rzutów obronnych<br><br>
+                    Modyfikator Siły:
+                    <div class="mm"><p class="wynik" id="saveS">-</p></div>
+                    Modyfikator Zręczności:
+                    <div class="mm"><p class="wynik" id="saveZ">-</p></div>
+                    Modyfikator Kondycji:
+                    <div class="mm"><p class="wynik" id="saveK">-</p></div>
+                    Modyfikator Inteligencji:
+                    <div class="mm"><p class="wynik" id="saveI">-</p></div>
+                    Modyfikator Mądrości:
+                    <div class="mm"><p class="wynik" id="saveM">-</p></div>
+                    Modyfikator Charyzmy:
+                    <div class="mm"><p class="wynik" id="saveC">-</p></div>
+                </div>
+                <div class="zawartosc3">
+                    Bonus do podanej umiejętności:
+                    <div class="mm"><p class="wynik" id="umjbonus">-</p></div>
+                    Twoja klasa pancerza:
+                    <div class="mm"><p class="wynik" id="zbrbonus">-</p></div>
+                    Bonus do ataku bronią:
+                    <div class="mm"><p class="wynik" id="brnbonus">-</p></div>
+                    Bonus do użycia narzędzi:
+                    <div class="mm"><p class="wynik" id="nrzbonus">-</p></div>
+                </div>
+                <!-- <div class="zawartosc4">
+                    
+                </div>
+                <div class="zawartosc5">
+                    
+                </div>
+                <div class="zawartosc6">
+                    
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

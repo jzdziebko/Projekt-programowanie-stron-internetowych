@@ -1,165 +1,24 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <title>Menu</title>
 </head>
-
 <body>
-    <div class="cala">
-        <div class="content">
-            <div class="wpis">
-                <div class="box" class="act1">
-                    <div class="smallbox">
-                        <div>
-                            <label >Wybierz klasę: </label><br>
-                            <input type="radio" id="klr" name="k" value="Cleric" onclick="updateCl()">
-                            <label for="klr">Kleryk</label><br>
-                            <input type="radio" id="wjw" name="k" value="Fighter" onclick="updateFi()">
-                            <label for="wjw">Wojownik</label><br>
-                            <input type="radio" id="ltr" name="k" value="Rogue" onclick="updateRo()">
-                            <label for="ltr">Łotr</label><br>
-                            <input type="radio" id="mag" name="k" value="Wizard" onclick="updateWi()">
-                            <label for="mag">Mag</label><br>
-                            <br>
-                            <label for="rasa">Wybierz rasę:</label><br>
-                            <input type="radio" id="dwf" name="r" value="Dwarf" onclick="updateD()">
-                            <label for="dwf">Krasnolud</label><br>
-                            <input type="radio" id="elf" name="r" value="Elf" onclick="updateE()">
-                            <label for="elf">Elf</label><br>
-                            <input type="radio" id="hlg" name="r" value="Half" onclick="updateN()">
-                            <label for="hlg">Niziołek</label><br>
-                            <input type="radio" id="hum" name="r" value="Human" onclick="updateC()">
-                            <label for="hum">Człowiek</label><br>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="cstr">Wysokość twojej siły: </label>
-                            <input type="number" id="cstr" name="cstr" onchange="updateSil()"><br>
-                            <label for="cdex">Wysokość twojej zręczności: </label>
-                            <input type="number" id="cdex" name="cdex" onchange="updateZre()"><br>
-                            <label for="ccon">Wysokość twojej kondycji: </label>
-                            <input type="number" id="ccon" name="ccon" onchange="updateKon()"><br>
-                            <label for="cint">Wysokość twojej inteligencji: </label>
-                            <input type="number" id="cint" name="cint" onchange="updateInt()"><br>
-                            <label for="cwis">Wysokość twojej mądrości: </label>
-                            <input type="number" id="cwis" name="cwis" onchange="updateWie()"><br>
-                            <label for="ccha">Wysokość twojej charyzmy: </label>
-                            <input type="number" id="ccha" name="ccha" onchange="updateCha()">
-                        </div>
-                    </div>
-                </div>
-                <div class="box" class="act2">
-                    <div class="smallbox">
-                        <div>
-                            <label for="umj">Wybierz 4 umiejętności:</label><br>
-                            <input type="radio" id="umj1" value="">
-                            <label for="umj1">Akrobatyka</label><br>
-                            <input type="radio" id="umj2" value="">
-                            <label for="umj2">Opieka nad Zwierzętami</label><br>
-                            <input type="radio" id="umj3" value="">
-                            <label for="umj3">Wiedza Tajemna</label><br>
-                            <input type="radio" id="umj4" value="">
-                            <label for="umj4">Atletyka</label><br>
-                            <input type="radio" id="umj5" value="">
-                            <label for="umj5">Oszustwo</label><br>
-                            <input type="radio" id="umj6" value="">
-                            <label for="umj6">Historia</label><br>
-                            <input type="radio" id="umj7" value="">
-                            <label for="umj7">Intuicja</label><br>
-                            <input type="radio" id="umj8" value="">
-                            <label for="umj8">Zastraszanie</label><br>
-                            <input type="radio" id="umj9" value="">
-                            <label for="umj9">Śledztwo</label><br>
-                            <input type="radio" id="umj10" value="">
-                            <label for="umj10">Medycyna</label><br>
-                            <input type="radio" id="umj11" value="">
-                            <label for="umj11">Natura</label><br>
-                            <input type="radio" id="umj12" value="">
-                            <label for="umj12">Percepcja</label><br>
-                            <input type="radio" id="umj13" value="">
-                            <label for="umj13">Występy</label><br>
-                            <input type="radio" id="umj14" value="">
-                            <label for="umj14">Przekonywanie</label><br>
-                            <input type="radio" id="umj15" value="">
-                            <label for="umj15">Religia</label><br>
-                            <input type="radio" id="umj16" value="">
-                            <label for="umj16">Zwinne Dłonie</label><br>
-                            <input type="radio" id="umj17" value="">
-                            <label for="umj17">Skradanie Się</label><br>
-                            <input type="radio" id="umj18" value="">
-                            <label for="umj18">Sztuka Przetrwania</label><br>
-                        </div>
-                    </div>
-                    <div class="smallbox">
-                        <label for="equ">Wybierz początkowe wyposażenie: </label>
-                        <select id="equ" name="equ">
-                            <option value="zw">Zestaw Włamywacza</option>
-                            <option value="zd">Zestaw Dyplomaty</option>
-                            <option value="za">Zestaw Artysty</option>
-                            <option value="zo">Zestaw Odkrywcy</option>
-                            <option value="zwz">Zestaw Wyznawcy</option>
-                            <option value="zu">Zestaw Uczonego</option>
-                        </select><br>
-                        <label for="lan">Wybierz znany ci język: </label>
-                        <select id="lan" name="lan">
-                            <option value="kra">Krasnoludzki</option>
-                            <option value="elf">Elficki</option>
-                            <option value="gig">Giganci</option>
-                            <option value="gno">Gnomi</option>
-                            <option value="gob">Goblini</option>
-                            <option value="niz">Niziołczy</option>
-                            <option value="ork">Orczy</option>
-                        </select><br>
-                        <label for="bie">Wybierz dodatkowe biegłości: </label>
-                        <div>
-                            <input type="radio" id="bie1" value="">
-                            <label for="bie1">Lekka Zbroja</label><br>
-                            <input type="radio" id="bie2" value="">
-                            <label for="bie2">Średnia Zbroja</label><br>
-                            <input type="radio" id="bie3" value="">
-                            <label for="bie3">Ciężka Zbroja</label><br>
-                            <input type="radio" id="bie4" value="">
-                            <label for="bie4">Broń Prosta</label><br>
-                            <input type="radio" id="bie5" value="">
-                            <label for="bie5">Broń Wojskowa</label><br>
-                            <input type="radio" id="bie6" value="">
-                            <label for="bie6">Zestaw Przebrań</label><br>
-                            <input type="radio" id="bie7" value="">
-                            <label for="bie7">Narzędzia Złodzieja</label><br>
-                            <input type="radio" id="bie8" value="">
-                            <label for="bie8">Narzędzia Rzemieślnicze</label><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wyniki">
-                <div class="zawartosc1">
-                    Modyfikatory cech
-                    <div><p id="modS">-</p></div>
-                    <div><p id="modZ">-</p></div>
-                    <div><p id="modK">-</p></div>
-                    <div><p id="modI">-</p></div>
-                    <div><p id="modM">-</p></div>
-                    <div><p id="modC">-</p></div>
-                    <br>
-                </div>
-                <div class="zawartosc2">
-                    Modyfikatory rzutów obronnych
-                    <div><p id="saveS">-</p></div>
-                    <div><p id="saveZ">-</p></div>
-                    <div><p id="saveK">-</p></div>
-                    <div><p id="saveI">-</p></div>
-                    <div><p id="saveM">-</p></div>
-                    <div><p id="saveC">-</p></div>
-                </div>
-            </div>
+    <div class="indexContainer">
+        <div class="indexHeader">
+            <div>Kalkulator</div>
+            <div>Dungeons & Dragons</div>
+        </div>
+        <div class="indexMenu">
+            <div class="indexM"><a href="jeden.html" class="opislink">O stronie</a></div>
+            <div class="indexM"><a href="dwa.html" class="opislink">Kalkulator Karty Postaci</a></div>
+            <div class="indexM" class="opislink">Kalkulator Walki Turowej</div>
         </div>
     </div>
 </body>
-<script src="main.js"></script>
 </html>
